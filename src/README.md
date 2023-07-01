@@ -51,3 +51,5 @@ There's a slight bug with the bookmarking, I'm not sure what's going on there or
 
 It's pretty late and I don't feel like writing either, so yeah! Thank you Lysandra for getting this done, and I hope we can make an even better system. Another issue I have is that I am unable to build upon something I don't like, I'll just start anew. I feel the same way already, unfortunately. It's not perfect, so I want to just scrap it and start over, but I can't do that because I am mortal and I don't have an unlimited amount of time in life. One thing I'll be keeping is the Form Check system though, that is my prized possession!
 
+And the scheduling appointment and finding appointment pages are responsive! Isn't that awesome? "Yes!" said the nonexistent crowd. Goodbye! I tink there's a lot more to this project than I am giving it right now, but I am seriously tired and these descriptions aren't my strong suit. Please understand!
+
