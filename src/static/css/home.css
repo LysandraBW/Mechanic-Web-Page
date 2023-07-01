@@ -1,0 +1,289 @@
+*, *::after, *::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+:root {
+      /* Fonts */
+      --font-1: "Mukta", sans-serif;
+      --font-2: "Open Sans", sans-serif;
+
+      --title-font: "Mukta", sans-serif;
+      --text-font: "Open Sans", sans-serif;
+
+      /* Text Colors for Light Mode */
+      --light-contrast-text-high: black;
+      --light-contrast-text-medium: #545454;
+      --light-contrast-text-low: #929292;
+
+      /* Text Colors for Dark Mode */
+      --dark-contrast-text-high: white;
+      --dark-contrast-text-medium: #C2C2C2;
+      --dark-contrast-text-low: #b7b7b7;
+
+      /* Background Color (Light/Dark) */
+      --light-body-BG: white;
+      --dark-body-BG: #141818;
+
+      /* Colors Used */
+      --accent: #3C81ED;
+      --dark-gray: #1c1d22;
+      --light-gray: #EFEFEF;
+      --slate: #26282E;
+
+      /* Border Colors (Light/Dark) */
+      --dark-border-color: #585b6485;
+      --light-border-color: #E3E3E3;
+
+      /* Border Mania */
+      --border-radius: 7px;
+      --border-t-curve: var(--border-radius) var(--border-radius) 0 0;
+      --border-b-curve: 0 0 var(--border-radius) var(--border-radius);
+      --border-l-curve: var(--border-radius) 0 0 var(--border-radius);
+      --border-r-curve: 0 var(--border-radius) var(--border-radius) 0;
+
+      /* Spacing */
+      --space: 4.5rem;
+      --double-space: calc(2 * var(--space));
+      --half-space: calc(0.5 * var(--space));
+      --quarter-space: calc(0.25 * var(--space));
+      --fifth-space: calc(0.2 * var(--space));
+      --side-padding: 6.5rem;
+
+      /* Shadows */
+      /* Thank you Josh Comeau */
+      --light-shadow-color: 0deg 0% 63%;
+      --light-shadow-elevation-low: -1px 1px 2.1px hsl(var(--light-shadow-color) / 0), -3px 3px 6.4px hsl(var(--light-shadow-color) / 0.25);
+      --light-shadow-elevation-medium: -0.5px 0.5px 0.8px hsl(var(--light-shadow-color) / 0.48), -2.5px 2.5px 4px -1.2px hsl(var(--light-shadow-color) / 0.48), -9.6px 9.9px 15.5px -2.5px hsl(var(--light-shadow-color) / 0.48);
+      --light-shadow-elevation-high: -0.1px 0.1px 0.2px hsl(var(--light-shadow-color) / 0.54), -1.3px 1.4px 2.1px -0.6px hsl(var(--light-shadow-color) / 0.54), -3.1px 3.4px 5.2px -1.2px hsl(var(--light-shadow-color) / 0.54), -6.8px 7.4px 11.3px -1.9px hsl(var(--light-shadow-color) / 0.54), -13.6px 14.8px 22.6px -2.5px hsl(var(--light-shadow-color) / 0.54);
+}
+
+html {
+      font-size: 16px;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      background-color: var(--light-body-BG);
+}
+
+body {
+      background: var(--light-body-BG);
+      overflow-x: hidden;
+      position: relative;
+      width: 100%;
+}
+
+/* Generalizing Text */
+
+body * {
+      font-weight: 400;
+      font-family: var(--font-2);
+      color: var(--light-contrast-text-medium);
+}
+
+h1, h2, h3, h4, h5, h6 {
+      color: var(--light-contrast-text-high);
+      font-family: var(--font-1);
+}
+
+
+/* Sizing the Text */
+
+h1 {
+      line-height: 4.2rem;
+      font-weight: 600;
+      font-size: 4rem;
+}
+
+h2 {
+      line-height: 2.7rem;
+      font-size: 2.5rem;
+}
+
+h3 {
+      font-size: 2rem;
+}
+
+h4 {
+      font-size: 1.5rem;
+}
+
+h5 {
+      font-size: 1.25rem;
+}
+
+h6 {
+      font-size: 1rem;
+}
+
+p, a {
+      font-size: 0.85rem;
+}
+
+a {
+      text-decoration: none;
+}
+
+span {
+      font-size: 0.75rem;
+      color: var(--light-contrast-text-low);
+}
+
+
+/* General Layout */
+
+nav, section#intro, section#proof, section#outro {      
+      padding-left: 7.5rem;
+      padding-right: 7.5rem;
+}
+
+page-break {
+      display: block;
+      padding: 9rem;
+      width: 100%;
+}
+
+/* Intro */
+
+section#intro {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: var(--double-space);
+}
+
+section#intro header {
+      width: min-content;
+}
+
+section#intro header h1 {
+      font-family: "Mukta";
+      line-height: 4.2rem;
+      font-weight: 600;
+      font-size: 4rem;
+      margin-bottom: var(--fifth-space);
+      white-space: nowrap;
+}
+
+section#intro header h1 div {
+      font-family: "Mukta";
+      display: inline-block;
+      color: var(--accent);
+      line-height: 4.2rem;
+      font-weight: 600;
+      font-size: 4rem;
+}
+
+section#intro img {
+      width: 600px;
+      height: 400px;
+      background: black;
+}
+
+/* Proof */
+
+section#proof {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      row-gap: var(--half-space); 
+      overflow-x: clip;     
+}
+
+section#proof sub-header {
+      width: fit-content;
+      padding: 0 var(--side-padding);
+}
+
+section#proof sub-header h2 {
+      white-space: nowrap;
+      margin-bottom: var(--fifth-space);
+}
+
+/* Proof: Cards */
+
+section#proof div#cardContainer {
+      display: flex;
+      column-gap: var(--space);
+      padding-left: var(--side-padding);
+}
+
+section#proof div.card {
+      min-width: 500px;
+      height: 350px;
+      padding: var(--half-space);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 3px solid #e8e8e8;
+      border-radius: 5px;
+      box-shadow: var(--light-shadow-elevation-medium);
+}
+
+section#proof div.card:hover {
+      box-shadow: var(--light-shadow-elevation-high);
+      transition: 0.5s;
+}
+
+section#proof .card div {
+      display: flex;
+      flex-direction: column;
+      row-gap: var(--quarter-space);
+}
+
+section#proof div.card img {
+      width: 50px;
+      height: 50px;
+      border: none;
+}
+
+section#proof div.card h4 {
+      white-space: nowrap;
+}
+
+/* Outro */
+
+section#outro {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+section#outro sub-header {
+      display: block;
+      width: min-content;
+      margin-bottom: var(--space);
+}
+
+section#outro sub-header h2 {
+      margin-bottom: var(--fifth-space);
+      white-space: nowrap;
+}
+
+section#outro img {
+      background: black;
+      width: 600px;
+      height: 400px;
+}
+
+section#outro button {
+      background: var(--accent);
+      padding: 15px;
+      border: none;
+      border-radius: 3px;
+      outline: 3px solid #83b4ff;
+      box-shadow: 0 7px 0 2px #2855ca;
+      cursor: pointer;
+}
+
+section#outro button a {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+}
+
+section#outro button:active {
+      box-shadow: 0 4px 0 2px #2855ca;
+      position: relative;
+      top: 7px;
+}

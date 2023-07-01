@@ -1,0 +1,46 @@
+:root {
+      --inter: 'Inter Tight', sans-serif;
+
+      --gray-100: black;
+      --gray-200: gray;
+      --gray-300: lightgray;
+      --gray-400: white;
+
+      --background: #FFFFFF;
+
+      --blue: #0066FF;
+      --green: #15932E;
+}
+
+:root {
+      font-size: 16px;
+}
+
+:root.dark-mode {
+      --background: #101010;
+      --gray-100: white;
+      --gray-200: lightgray;
+      --gray-300: gray;
+      --gray-400: black;
+}
+
+.dark-mode {
+      background: black;
+}
+
+*, *::after, *::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+* {
+      font-family: var(--inter);
+      font-weight: 400;
+      font-size: 1rem;
+      color: var(--gray-100);
+}
+
+a {
+      text-decoration: none;
+}

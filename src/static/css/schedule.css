@@ -1,0 +1,46 @@
+nav nav-banner ul#desktop {
+      background: transparent;
+}
+
+section#main {
+      display: flex;
+      flex-flow: column;
+}
+
+section#main:has(message-box) {
+      justify-content: center;
+}
+
+section#main section#content {
+      align-items: center;
+}
+
+section#main section#content > * {
+      width: 500px;
+}
+
+section#main section#content header h1 {
+      text-align: center;
+}
+
+@media all and (max-width: 750px) {
+      section#main:not(:has(message-box)) {
+            display: block;
+            min-height: fit-content;
+      }
+
+      section#main section#content:not(:has(message-box)) {
+            height: fit-content;
+            justify-content: start;
+      }
+}
+
+@media screen and (max-width: 500px) {
+      section#main section#content {
+            align-items: stretch;
+      }
+
+      section#main section#content > * {
+            width: auto;
+      }  
+}

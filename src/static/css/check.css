@@ -1,0 +1,267 @@
+nav nav-banner ul#desktop {
+      border-radius: 13px 0 0 0;
+      background: transparent;
+}
+
+progress-bar {
+      grid-template-columns: 50% 50%;
+}
+
+section#main section#content > * {
+      width: 500px;
+}
+
+/* Gradient */
+
+section#main section#content header h1 {
+      background: linear-gradient(214deg, rgba(24,24,25,1) 30%, rgb(119 120 130) 50%, rgba(24,24,25,1) 82%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+/* Results (RH-Side) */
+
+section#main section#results {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem 7.5rem;
+      background: #101010;
+      border-radius: 0px 0 0 13px;
+      position: relative;
+}
+
+/* Creating the curved appearance */
+
+section#results::before {
+      content: "";
+      width: 100%;
+      height: 85px;
+      position: absolute;
+      top: -85px;
+      background: #101010;
+      border-radius: 13px 0 0 0;
+}
+
+/* Info-Box  */
+
+section#main section#results div#info-box {
+      display: flex;
+      flex-flow: column;
+      min-width: 500px;
+      height: fit-content;
+      padding: 5px;background: #181818b8;
+      border-radius: 13px;
+      outline: 2px solid #ffffff26;
+}
+
+section#main section#results div#info-box * {
+      position: relative;
+      color: var(--gray-400);
+}
+
+section#main section#results div#info-box > div {
+      background: linear-gradient(180deg,#242424,#121212 65.62%);
+      border-radius: 12px;
+}
+
+/* Header */
+
+section#main section#results div#info-box header {
+      display: grid;
+      grid-template-columns: auto auto;
+      padding: 0px;
+      border-radius: 13px 13px 0 0;
+      border-bottom: 1px solid #ffffff0d;
+      box-shadow: 0px 2px 20px 0px #0000005c;      
+}
+
+section#main section#results div#info-box header h3 {
+      padding: 15px 0px 15px 10px;
+      font-size: 1.5rem;
+      font-weight: 400;
+}
+
+section#main section#results div#info-box header span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 10px 15px 0px;
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-align: center;
+      border-left: 1px solid #ffffff0d;
+      border-radius: 0 13px 0 0;
+}
+
+/* Error Message */
+
+section#main section#results div#info-box p {
+      text-align: center;
+      padding: 25px;
+}
+
+section#main section#results div#info-box p.error {
+      display: flex;
+      justify-content: center;
+      flex-flow: column;
+      align-items: center;
+      row-gap: 10px;
+}
+
+section#main section#results div#info-box p.error svg {
+      width: 40px;
+      height: 40px;
+      fill: var(--error-100);
+      filter: drop-shadow(0px 0px 2px #ff2828);
+}
+
+section#main section#results div#info-box p.error > span:first-of-type {
+      font-weight: 600;
+}
+
+section#main section#results div#info-box p.error > span:not(:first-of-type) {
+      font-size: 0.85rem;
+      color: var(--gray-300) !important;
+}
+
+/* No-Input Message */
+
+section#main section#results div#info-box p.wait {
+      display: flex;
+      flex-flow: column-reverse;
+      justify-content: center;
+      align-items: center;
+      row-gap: 10px;
+}
+
+section#main section#results div#info-box p.wait svg {
+      width: 40px;
+      height: 40px;
+      filter: drop-shadow(0px 0px 2px #FFFFFFAA);
+}
+
+/* Table */
+
+table {
+      border-collapse: collapse;
+      border-radius: 0 0 13px 13px;
+      width: 100%;
+}
+
+tr {
+      box-shadow: 0px 3px 5px -2px #00000045;
+}
+
+tr > td:first-child {
+      white-space: nowrap;
+      width: 75px;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+}
+
+thead th {
+      font-weight: 500;
+      letter-spacing: 0.2px;
+}
+
+th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ffffff0d;
+      vertical-align: top;
+      text-align: left;
+      font-size: 0.825rem;
+      font-weight: 300;
+}
+
+li {
+      list-style: none;
+      font-size: 0.825rem;
+      font-weight: 300;  
+}
+
+table > tbody > tr:last-child td {
+      border: none;
+}
+
+/* Button Container */
+
+button-container button#check {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      background: var(--gray-100);
+      border-radius: 3px;
+}
+
+button-container button#check * {
+      font-weight: 500;
+      color: var(--gray-400);
+      fill: var(--gray-400);
+}
+
+button-container button#check svg {
+      width: 22px;
+      height: 22px;
+      margin-left: 3px;
+}
+
+button-container span#redirect {
+      text-align: center;
+}
+
+button-container span#redirect a {
+      font-weight: 500;
+      text-decoration: none;
+}
+
+button-container span#redirect a:hover {
+      border-bottom: 1px solid black;
+}
+
+/* Media Queries */
+
+@media all and (max-width: 1300px) {
+      nav nav-banner ul#desktop {
+            background: transparent !important;
+      }
+
+      section#main {
+            display: block;
+      }
+
+      section#content {
+            align-items: center;
+            height: auto !important;
+      }
+
+      section#main section#content header h1 {
+            text-align: center;
+      }
+
+      section#results {
+            border-radius: 13px 13px 0 0 !important;
+      }
+
+      section#results::before {
+            display: none;
+      }
+}
+
+@media all and (max-width: 950px) {
+      
+      section#main section#results {
+            padding-left: 1vw;
+            padding-right: 1vw;
+      }
+}
+
+
+@media all and (max-width: 500px) {
+      section#main section#content > *,
+      section#main section#results div#info-box {
+            min-width: 0px;
+            width: 100%;
+      }
+}

@@ -1,0 +1,209 @@
+/* 1. Text */
+
+label {
+      font-size: 0.85rem;
+      color: var(--gray-200);
+}
+
+
+/* 2. Input Field */
+
+input-field {
+      display: flex;
+      width: 100%;
+      flex-flow: column;
+      row-gap: 5px;
+}
+
+
+/* 3. Inputs */
+
+/* Inputs: General Styling */
+
+input, 
+select, 
+input-segment,
+input-segment button,
+checkbox-container, 
+checkbox-container button {
+      width: 100%;
+      padding: 10px;
+      font-weight: 500;
+      background: transparent;
+      border: 1px solid var(--gray-300);
+      border-radius: 3px;
+}
+
+/* Inputs: Button */
+
+button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+}
+
+/* Inputs: Input Segment (Buttons) */
+
+input-segment {
+      display: flex;
+      column-gap: 5px;
+}
+
+/* Inputs: Checkboxes */ 
+
+checkbox-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+}
+
+checkbox-container button {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+}
+
+checkbox-button {
+      display: inline-flex;
+      width: 13px;
+      height: 13px;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--gray-300);
+      border-radius: 2px;
+}
+
+checkbox-button svg {
+      display: none;
+      fill: white;
+}
+
+
+/* 4. Selected */
+
+/* Inputs: Input Segment (Buttons) */
+
+input-segment button.selected {
+      color: var(--gray-100);
+      border-color:var(--blue);
+}
+
+/* Inputs: Checkbox */
+
+checkbox-container button.selected {
+      border-color: var(--blue);
+}
+
+checkbox-container button.selected checkbox-button {
+      border-color: var(--blue);
+      background: var(--blue);
+}
+
+checkbox-container button.selected checkbox-button svg {
+      display: block;
+}
+
+checkbox-container button.selected checkbox-label {
+      display: inline-block;
+      font-weight: 500;
+}
+
+
+/* 5. Focus */
+
+input:focus, 
+select:focus {
+      outline: none;
+      border: 1px solid var(--gray-200);
+}
+
+
+/* 6. Hover */
+
+input-segment button:hover,
+checkbox-container button:hover {
+      backdrop-filter: contrast(0.9);
+      
+}
+
+
+/* 7. Error */
+
+.error {
+      --error-100: #DB1111;
+      --error-200: #EF2E2E;
+}
+
+error-message {
+      display: none;
+}
+
+/* Error: Tweaking Inputs */
+
+input-field.error input, 
+input-field.error select {
+      border-color: var(--error-100);
+      color: var(--error-100);
+}
+
+input-field.error checkbox-container,
+input-field.error input-segment {
+      border-color: var(--error-100);
+}
+
+input-field.error checkbox-container button.selected,
+input-field.error input-segment button.selected {
+      border-color: var(--error-100);
+      color: var(--error-100);
+}
+
+input-field.error checkbox-container button.selected checkbox-button {
+      background: var(--error-100);
+      border-color: var(--error-100)
+}
+
+input-field.error checkbox-container button.selected checkbox-label {
+      color: var(--error-100);
+}
+
+input-field.error input:focus, 
+input-field.error select:focus {
+      border-color: var(--error-200);
+}
+
+/* Error: Error Messages */
+
+input-field.error error-message {
+      display: inline-flex;
+      align-items: center;
+      column-gap: 3px;
+}
+
+input-field.error error-message * {
+      font-size: 0.8rem;
+      color: var(--error-100);
+}
+
+input-field.error error-message svg {
+      width: 12px;
+      height: 12px;
+      margin-right: 5px;
+      position: relative;
+      top: 1.5px;
+}
+
+input-field.error error-message > span > span {
+      font-weight: 500;
+}
+
+
+/* Other */
+
+.leveled {
+      display: flex;
+      column-gap: 15px;
+}
+
+._4 {
+      grid-template-columns: repeat(4, 24%);
+}

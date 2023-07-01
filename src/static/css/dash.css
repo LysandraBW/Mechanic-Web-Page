@@ -1,0 +1,649 @@
+.b {
+      --gray-500: #dedede87;
+      --blur: hsl(0deg 0% 100% / 26%);
+      --transparent-blur: hsl(0deg 0% 100% / 59%);
+}
+
+.dark-mode.b {
+      --gray-500: #46465087;
+      --blur: hsla(0, 0%, 0%, 0.8);
+      --transparent-blur: hsl(0deg 0% 0% / 81%);
+}
+
+#page-banner {
+      display: flex;
+      border-bottom: 1px solid var(--gray-500);   
+}
+
+/* Blurred Page Banner */
+
+#page-banner.blur {
+      border: none;
+}
+
+#page-banner.blur > * {
+      backdrop-filter: saturate(180%) blur(4px);
+      background: var(--blur);
+}
+
+#page-banner.blur > header {
+      padding-left: 0px;
+      border-left: none;
+}
+
+/* Logo */
+
+#page-banner img-logo {
+      display: flex;
+      padding: 25px;
+      min-width: 250px;
+      justify-content: start;
+}
+
+#page-banner img {
+      width: 100px;
+      height: 50px;
+      border: 1px solid gray;
+}
+
+/* Header */
+
+#page-banner header {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      row-gap: 5px;
+      padding: 25px;
+      border-left: 1px solid var(--gray-500);
+}
+
+#page-banner header header-profile {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+}
+
+#page-banner header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+}
+
+#page-banner header p {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--gray-200);
+}
+
+#page-banner.dark header p {
+      color: var(--gray-300);
+}
+
+#page-banner header svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--gray-200);
+}
+
+#page-banner.dark header svg {
+      fill: var(--gray-300);
+}
+
+/* Header Profile Links */
+
+#page-banner header header-profile-links {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+}
+
+/* Profile Section */
+
+#page-banner header profile-picture {
+      display: block;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid var(--gray-200);
+}
+
+#page-banner.dark header profile-picture {
+      border-color: var(--gray-300);
+}
+
+/* Contact Information of Profile */
+
+#page-banner header contact-information {
+      display: flex;
+      flex-flow: column;
+}
+
+#page-banner header contact-information span {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--gray-100);
+}
+
+#page-banner.dark header contact-information span {
+      color: white;
+}
+
+/* "Email" in Profile Section */
+
+#page-banner header contact-information > span:nth-child(2) {
+      font-weight: 400;
+      color: var(--gray-200);
+}
+
+#page-banner.dark  header contact-information > span:nth-child(2) {
+      color: var(--gray-300);
+}
+
+/* Lower-Half of Page */
+
+#page-content {
+      display: flex;
+      height: 100%;
+}
+
+#page-content nav {
+      display: flex;
+      width: 250px;
+      height: 100%;
+      flex-flow: column;
+      row-gap: 25px;
+      padding: 25px;
+}
+
+/* "Create Appointment" Button */
+
+#page-content nav > a.primary-button {
+      display: flex;
+      width: fit-content;
+      column-gap: 10px;
+      align-items: center;
+      padding: 10px;
+      border-radius: 5px;
+      background: var(--gray-100);
+      white-space: nowrap;
+}
+
+#page-content nav > a.primary-button > span {
+      font-size: 0.825rem;
+      font-weight: 500;
+      color: var(--gray-400);
+}
+
+.dark-mode #page-content nav > a.primary-button > span {
+      font-weight: 600;
+}
+
+#page-content nav > a.primary-button > svg {
+      fill: var(--gray-400);
+}
+
+/* Nav Links */
+
+#page-content ul-links {
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      height: 100%;
+}
+
+#page-content nav ul {
+      display: flex;
+      flex-flow: column;
+}
+
+#page-content nav ul a {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      padding: 10px;
+      border-radius: 5px;
+}
+
+#page-content nav ul a span {
+      font-size: 0.825rem;
+}
+
+#page-content nav ul a.selected, #page-content nav ul a:hover {
+      background: #f0f0f0;
+}
+
+.dark-mode #page-content nav ul a.selected, .dark-mode #page-content nav ul a:hover {
+      background: hsl(0deg 0.65% 7.98% / 80%);
+}
+
+#page-content nav ul a.selected span {
+      font-weight: 500;
+      color: var(--gray-100);
+}
+
+/* Dash Board */
+
+#page-content dash-board {
+      display: block;
+      margin-top: 25px;
+}
+
+#page-content dashboard-actions, #page-content dashboard-tabs {
+      display: flex;
+      column-gap: 10px;
+      padding: 0px 10px;
+      border-bottom: 1px solid var(--gray-500);
+}
+
+#page-content dashboard-actions {
+      padding: 5px 10px;
+}
+
+#page-content dashboard-tabs {
+      padding-bottom: 0px;
+}
+
+#page-content dashboard-actions a, #page-content dashboard-tabs a {
+      display: flex;
+      column-gap: 5px;
+      align-items: center;
+      padding: 10px;
+      border-radius: 5px;
+      position: relative;
+      transition: all 0.2s;
+}
+
+/* Button Resemblance */
+
+#page-content dashboard-actions a {
+      padding: 5px 10px;
+      height: fit-content;
+      display: flex;
+      align-self: center;
+      border: 1px solid #8080801f;
+      cursor: pointer;
+}
+
+#page-content dashboard-actions a:hover {
+      backdrop-filter: contrast(0.9);
+}
+
+#page-content dashboard-tabs a {
+      border-radius: 0;
+}
+
+/* ... */
+
+#page-content dashboard-actions a span, #page-content dashboard-tabs a span {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--gray-200);
+}
+
+#page-content dashboard-actions a svg, #page-content dashboard-tabs a svg {
+      fill: var(--gray-200);
+      width: 13px;
+      height: 13px;
+}
+
+#page-content dashboard-tabs a span.num {
+      color: var(--gray-200);
+      border-radius: 3px;
+      font-size: 0.65rem;
+      font-weight: 600;
+}
+
+/* Selected Tab */
+
+#page-content dashboard-tabs a.selected::after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      background: var(--gray-100);
+      border-radius: 15px;
+}
+
+#page-content dashboard-tabs a.selected span {
+      font-weight: 500;
+      color: var(--gray-100);
+}
+
+#page-content dashboard-tabs a.selected svg {
+      fill: var(--gray-100);
+}
+
+#page-content dashboard-tabs a.selected span.num {
+      color: var(--blue) !important;
+}
+
+/* Hovering on Tab */
+
+#page-content dashboard-tabs a:hover {
+      cursor: pointer;
+      backdrop-filter: contrast(0.9);
+}
+
+/* Dashboard Dashboard */
+
+dash-board {
+      border: 1px solid var(--gray-500);
+      border-radius: 5px;
+      /* Blur Effect */
+      backdrop-filter: saturate(180%) blur(5px);
+      background: var(--blur);
+}
+
+dashboard-table {
+      display: block;
+}
+
+/* Table Rows */
+
+dashboard-table table-row {
+      display: flex;
+      position: relative;
+      border-bottom: 1px solid var(--gray-500);
+      transition: 0.2s;
+      cursor: pointer;
+}
+
+dashboard-table table-row:hover {
+      box-shadow: 0px 1px 20px -11px black;
+}
+
+.dark-mode dashboard-table table-row:hover {
+      box-shadow: 0px 1px 9px 0px #80808021;
+}
+
+/* Minor Adjustments for L-Side to Line Up */
+
+dashboard-table table-row > table-cell:first-child {
+      margin-left: 10px;
+}
+
+dashboard-table table-row > table-cell:first-child, dashboard-table table-row > table-cell:last-child {
+      padding-left: 10px;
+      padding-right: 10px;
+}
+
+/* Bookmark SVG */
+
+dashboard-table .bi-bookmark, dashboard-table .bi-bookmark-fill {
+      width: 13px;
+      height: 13px;
+}
+
+dashboard-table .bi-bookmark-fill {
+      fill: rgb(255, 196, 0);
+}
+
+/* Selected Table Row */
+
+dashboard-table table-row:not(.head).selected {
+      background: #0000000f;
+}
+
+dashboard-table table-row:not(.head).selected::after {
+      content: "";
+      width: 2px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      bottom: 0px;
+      overflow-y: clip;
+      background: var(--blue);
+}
+
+/* Making the Checkbox Selected */
+
+dashboard-table table-row.selected checkbox-button {
+      border-color: var(--blue) !important;
+      background: var(--blue);
+}
+
+dashboard-table table-row.selected checkbox-button svg {
+      display: block;
+}
+
+/* More of a Table Look */
+
+dashboard-table table-row > table-cell:not(:last-child) {
+      border-right: 1px solid var(--gray-500);
+}
+
+/* Differentiating the Table Row Head */
+
+dashboard-table table-row.head table-cell {
+      color: gray;
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+}
+
+dashboard-table table-row.head svg {
+      fill: gray;
+}
+
+dashboard-table table-row.head svg.bi-check {
+      fill: white;
+}
+
+dashboard-table table-row.head checkbox-button {
+      border-color: gray;
+}
+
+/* Table Cells */
+
+dashboard-table table-row table-cell {
+      min-width: 120px;
+      padding: 5px 10px;
+      font-size: 0.75rem;
+      font-weight: 500;
+}
+
+dashboard-table table-row table-cell {
+      min-width: 175px;
+      max-width: 175px;
+      overflow-x: clip;
+}
+
+dashboard-table table-row > table-cell:first-child,
+dashboard-table table-row > table-cell:nth-child(2) {
+      display: flex;
+      min-width: 33px;
+      max-width: 33px;
+      justify-content: center;
+      align-items: center;
+}
+
+/* For Theme Purposes */
+
+checkbox-button {
+      border-color: var(--gray-100);
+      width: 10px;
+      height: 10px;
+}
+
+/* Unseen Row */
+
+dashboard-table table-row.unseen::before {
+      content: "";
+      background: var(--blue);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      position: absolute;
+      left: 5px;
+      top: calc(50% - 3px);
+}
+
+/* Inline Editor */
+
+#inline-editor {
+      display: flex;
+      flex-flow: column;
+      row-gap: 20px;
+      width: 55%;
+      padding: 25px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background: var(--transparent-blur);
+      backdrop-filter: saturate(180%) blur(5px);
+      border-radius: 10px 0 0 10px;
+      border: 1px solid var(--gray-500);
+      overflow-y: scroll;
+}
+
+#inline-editor header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 20px;
+}
+
+#inline-editor header h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+}
+
+#inline-editor header svg {
+      width: 25px;
+      height: 25px;
+      fill: var(--gray-100);
+      cursor: pointer;
+}
+
+/* Toggle Button + Label */
+
+#inline-editor #toggle-editor {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+}
+
+#inline-editor #toggle-editor > span {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--gray-200);
+      letter-spacing: 0.5px;
+}
+
+#inline-editor #toggle-editor #toggle-button {
+      width: 40px;
+      height: 20px;
+      padding: 2px;
+      background: var(--gray-300);
+      border-radius: 20px;
+      border: 1px solid gray;
+      cursor: pointer;
+}
+
+#inline-editor.edit #toggle-editor #toggle-button {
+      display: flex;
+      justify-content: end;
+}
+
+#inline-editor #toggle-editor #toggle-button #circle {
+      display: block;
+      width: 14px;
+      height: 14px;
+      background: white;
+      border-radius: 50%;
+      /* border: 1px solid #646464; */
+}
+
+/* Sections of Data */
+
+#inline-editor .data-section {
+      display: flex;
+      flex-flow: column;
+      row-gap: 10px;
+}
+
+#inline-editor .data-section > p {
+      font-weight: 700;
+      font-size: 0.9rem;
+}
+
+#inline-editor .data {
+      display: flex;
+      flex-flow: column;
+      row-gap: 10px;
+      padding-left: 10px;
+      margin-left: 10px;
+      border-left: 1px solid var(--gray-300);
+      position: relative;
+}
+
+/* Making Things Smaller */
+
+#inline-editor .data p span,
+#inline-editor label, #inline-editor input,
+#inline-editor input-segment button, 
+#inline-editor select, #inline-editor option,
+#inline-editor checkbox-label {
+      font-size: 0.8rem;
+}
+
+/* Labels */
+
+#inline-editor .data p span:first-child, #inline-editor label {
+      font-weight: 600;
+      color: var(--gray-100);
+}
+
+#inline-editor .data p span:nth-child(2) {
+      font-weight: 500;
+}
+
+/* Making Things Smaller (Again) */
+
+input, select, input-segment, input-segment button, checkbox-container, checkbox-container button {
+      padding: 5px 10px;
+}
+
+input-segment, checkbox-container {
+      padding: 5px;
+}
+
+/* Bottom Buttons */
+
+#inline-editor .buttons {
+      display: flex;
+      column-gap: 10px;
+}
+
+#inline-editor .buttons button {
+      width: -webkit-fill-available;
+      padding: 7.5px 10px;
+      background: var(--gray-100);
+      color: var(--gray-400);
+      border: 1px solid black;
+      border-radius: 3px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all 0.3s;
+}
+
+#inline-editor .buttons button.cancel:hover {
+      border-color: var(--gray-100);
+      background: transparent;
+      color: var(--gray-100);
+}
+
+#inline-editor .buttons button.delete:hover {
+      background: transparent;
+      border-color: #A30713;
+      color: #A30713;
+}
+
+#inline-editor .buttons button.save:hover {
+      background: transparent;
+      border-color: #0077FF;
+      color: #0077FF;
+}

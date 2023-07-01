@@ -1,0 +1,114 @@
+/* Navigation */
+
+nav {
+      width: 100%;
+      height: 85px;
+      position: sticky;
+      z-index: 10;
+      top: 0px;
+      border-bottom: 1px solid var(--gray-300);
+      backdrop-filter: saturate(180%) blur(5px);
+      background: hsla(0,0%,100%,.8)
+}
+
+/* Navigation Banner */
+
+nav nav-banner {
+      display: grid;
+      width: 100%;
+      height: 100%;
+      grid-template-columns: 50% 50%;
+      align-items: center;
+}
+
+/* Logo of Navigation */
+
+nav img-logo {
+      display: block;
+      width: 150px;
+      height: 50px;
+      border: 1px solid var(--gray-300);
+}
+
+/* RH-Side of Navigation */
+
+nav ul {
+      display: flex;
+      justify-self: end;
+      align-items: center;
+      column-gap: 15px;
+}
+
+nav ul a {
+      font-size: 0.85rem;
+}
+
+/* Mobile Navigation */
+
+nav ul#mobile {
+      display: none;
+}
+
+/* Dropdown Navigation (Mobile) */
+
+nav nav-dropdown {
+      display: none;
+}
+
+/* Button: Two Bars */
+
+nav ul#mobile button#nav-dropdown-button {
+      display: flex;
+      width: 20px;
+      height: 8px;
+      flex-flow: column;
+      row-gap: 1px;
+      position: relative;
+      background: transparent;
+      border: none;
+}
+
+/* The Two-Bar-Button of Navigation */
+
+button#nav-dropdown-button::before, button#nav-dropdown-button::after {
+      content: "";
+      display: block;
+      width: inherit;
+      position: absolute;
+      background: var(--gray-100);
+      border: 1px solid var(--gray-100);
+}
+
+/* Top Button of 2-Bars */
+
+button#nav-dropdown-button::before {
+      top: 0px;
+}
+
+/* Bottom Button of 2-Bars */
+
+button#nav-dropdown-button::after {
+      top: 100%;
+}
+
+/* Media Queries */
+
+@media all and (max-width: 950px) {
+      nav nav-banner logo-container {
+            padding-left: 1vw !important;
+      }
+
+      nav nav-banner ul {
+            padding-right: 1vw !important;
+      }
+}
+
+@media all and (max-width: 950px) {
+      nav ul#desktop {
+            display: none;
+      }
+
+      nav ul#mobile {
+            display: flex;
+      }
+}
